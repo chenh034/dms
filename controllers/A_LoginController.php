@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers\admin;
+namespace app\controllers;
 
 use Yii;
 use yii\web\Controller;
@@ -10,7 +10,7 @@ use app\models\Admin;
 /**
 * 
 */
-class LoginController extends Controller
+class A_loginController extends Controller
 {
 	
 	public function actionLogin(){

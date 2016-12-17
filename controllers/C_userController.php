@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers\index;
+namespace app\controllers;
 
 use Yii;
 use yii\web\Controller;
@@ -11,7 +11,7 @@ use app\models\ReceiptAddress;
 /**
 * 
 */
-class UserController extends Controller
+class C_userController extends Controller
 {
 	
 	public function actionIndex(){

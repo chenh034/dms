@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\db\ActiveRecord;
+use app\models\CommentPic;
 
 /**
 * 
@@ -28,6 +29,10 @@ class ProductComment extends ActiveRecord
            ['fresh_level','required','message'=>'新鲜度评价不能为空'],
            ['log_level','required','message'=>'物流评价不能为空']
 		];
+	}
+
+	public function getPics(){
+		return $this->hasMany(CommentPic::className(),['comment_id'=>'id']);
 	}
 
 	public function addComment($data){

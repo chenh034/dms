@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers\farm;
+namespace app\controllers;
 
 use Yii;
 use app\models\Product;

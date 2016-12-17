@@ -1,6 +1,6 @@
 <?php 
 
-namespace app\controllers\index;
+namespace app\controllers;
 
 use Yii;
 use yii\web\Controller;
@@ -9,7 +9,7 @@ use app\models\FontUser;
 /**
 * 
 */
-class LoginController extends Controller
+class C_loginController extends Controller
 {
 	
 	public function actionLogin(){

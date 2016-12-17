@@ -14,4 +14,8 @@ class IndexController extends Controller
 	public function actionIndex(){
 		echo 'hello';
 	}
+
+	public function actionTest(){
+		echo 222;
+	}
 }
