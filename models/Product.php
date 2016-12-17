@@ -7,6 +7,8 @@ use yii\db\ActiveRecord;
 use app\models\Species;
 use app\models\Setmeal;
 use app\models\FarmMessage;
+use app\models\FarmResult;
+use app\models\FarmUser;
 
 /**
 * 
@@ -45,6 +47,7 @@ class Product extends ActiveRecord
            ['advice','safe'],
            ['update_time','safe'],
            ['output','safe'],
+           ['rate','safe'],
            ['status','safe'],
            ['is_ok','safe'],
 		];
@@ -60,6 +63,14 @@ class Product extends ActiveRecord
 
 	public function getMessage(){
 		return $this->hasOne(FarmMessage::className(),['product_id'=>'id']);
+	}
+
+	public function getResult(){
+		return $this->hasOne(FarmResult::className(),['product_id'=>'id']);
+	}
+
+	public function getFarm(){
+		return $this->hasOne(FarmUser::className(),['id'=>'farm_id']);
 	}
 
 	public function addProduct($data){

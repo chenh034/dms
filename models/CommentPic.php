@@ -14,5 +14,12 @@ class CommentPic extends ActiveRecord
 	public static function tableName(){
 		return "{{%comment_pic}}";
 	}
+
+	public function rules(){
+		return [
+           ['comment_id','safe'],
+           ['img_url','safe']
+		];
+	}
 	
 }

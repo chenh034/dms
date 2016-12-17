@@ -21,6 +21,7 @@ class FarmResult extends ActiveRecord
            ['farm_id','safe'],
            ['product_id','safe'],
            ['content','safe'],
+           ['total_weight','safe'],
            ['createtime','safe']
 		];
 	}
